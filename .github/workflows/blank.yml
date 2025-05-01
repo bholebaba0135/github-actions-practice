@@ -30,15 +30,5 @@ jobs:
       - name: create file
         run: echo "Hello, world!!" > artifact.txt
 
-      # Runs a set of commands using the runners shell
-      - name: upload file
-        uses: actions/upload-artifact@v3
-        with:
-          name: my_artifact
-          path: artifact.txt
-
-      - name: download file
-        uses: actions/download-artifact@v3
-        with:
-          name: my_artifact
+      
 
