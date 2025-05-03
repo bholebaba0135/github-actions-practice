@@ -7,13 +7,12 @@ jobs:
       contents: read
       issues: write
     steps:
-    -name: create an issue of failure
-    if: failure()
-    uses: octokit/request-action@v2.4.0
-      with:
-        route: POST repos/${{github.repository}}/issues
-        title: "Test failed:${{github.ref}}"
-        body: "A test failed. Please check"
-      env:
-        GITHUB_TOKEN: ${{secrets.PRACTICE_TOKEN}}
-      
+      - name: create an issue of failure
+        if: failure()
+        uses: octokit/request-action@v2.4.0
+        with:
+          route: POST repos/${{github.repository}}/issues
+          title: "Test failed: ${{github.ref}}"
+          body: "A test failed. Please check"
+        env:
+          GITHUB_TOKEN: ${{secrets.PRACTICE_TOKEN}}
