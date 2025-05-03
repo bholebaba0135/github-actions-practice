@@ -34,6 +34,10 @@ jobs:
         with:
           name: myArt.txt
           path: artifact.txt
+      - name: download file
+        uses: actions/download-artifact@v4.3.0
+        with:
+          path: myArt.txt
 
       
 
