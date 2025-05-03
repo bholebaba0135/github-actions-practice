@@ -28,7 +28,12 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: create file
-        run: echo "Hello, world!!" > artifact.txt
+        run: echo "Hello, world!!" >> artifact.txt
+      - name: upload file
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: myArt.txt
+          path: artifact.txt
 
       
 
