@@ -1,5 +1,5 @@
 name: example CI_workflow
-on: [push]
+on: [push,workflow_dispatch]
 jobs:
   build-test:
     runs-on: ubuntu-latest
