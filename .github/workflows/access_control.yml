@@ -11,7 +11,7 @@ jobs:
         if: always()
         uses: octokit/request-action@v2.4.0
         with:
-          route: POST /repos/${{github.repository}}/issues
+          route: POST /repos/${{github.repository}}/Issues
           title: "Test failed: ${{github.ref}}"
           body: "A test failed. Please check"
         env:
