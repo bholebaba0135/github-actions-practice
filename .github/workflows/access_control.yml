@@ -8,7 +8,7 @@ jobs:
       issues: write
     steps:
       - name: create an issue of failure
-        if: failure()
+        if: always()
         uses: octokit/request-action@v2.4.0
         with:
           route: POST repos/${{github.repository}}/issues
