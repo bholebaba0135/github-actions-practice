@@ -9,9 +9,9 @@ jobs:
     steps:
       - name: create an issue of failure
         if: always()
-        uses: octokit/request-action@v2.4.0
+        uses: octokit/request-action@v2.1.9
         with:
-          route: POST /repos/${{github.repository}}/Issues
+          route: POST /repos/bholebaba0135/${{github.repository}}/Issues
           title: "Test failed: ${{github.ref}}"
           body: "A test failed. Please check"
         env:
